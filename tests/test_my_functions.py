@@ -24,3 +24,8 @@ def test_very_slow():
   time.sleep(1)
   result = my_functions.divide(10, 5)
   assert result == 2
+
+@pytest.mark.skip(reason="This feature is currently broken")
+def test_add():
+  assert my_functions.add(1, 2) == 3
+
